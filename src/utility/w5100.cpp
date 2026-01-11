@@ -101,7 +101,12 @@ uint8_t W5100Class::init(void)
 	delay(560);
 	//Serial.println("w5100 init");
 
+#ifndef BOARD_ESP_THREAD_BORDER_ROUTER
 	SPI.begin();
+#else
+ SPI.begin(21, 38, 45, 41);
+#endif
+
 	initSS();
 	resetSS();
 	SPI.beginTransaction(SPI_ETHERNET_SETTINGS);
