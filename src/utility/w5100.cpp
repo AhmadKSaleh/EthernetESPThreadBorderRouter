@@ -104,7 +104,7 @@ uint8_t W5100Class::init(void)
 #ifndef BOARD_ESP_THREAD_BORDER_ROUTER
 	SPI.begin();
 #else
- SPI.begin(21, 38, 45, 41);
+	SPI.begin(21, 38, 45, 41);
 #endif
 
 	initSS();
