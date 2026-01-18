@@ -41,6 +41,10 @@
 #elif defined(CORE_SS0_PIN)
 #define SS_PIN_DEFAULT  CORE_SS0_PIN
 
+// For ESP Thread Border Router board
+#elif defined(BOARD_ESP_THREAD_BORDER_ROUTER)
+#define SS_PIN_DEFAULT  41
+
 // As a final fallback, use pin 10
 #else
 #define SS_PIN_DEFAULT  10
